@@ -1,0 +1,173 @@
+/* 메가커피 메인 색상, 글자 색상, 글자 기본크기 */
+:root {
+    --mainColor: #fdd000;
+    --mainTextColor: #1c1c1b;
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* background: rgba(255, 0, 0, 0.3); */
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    /* padding: 25px 0 30px; */
+}
+
+.logo img {
+    width: 100%;
+}
+
+.main_menu {
+    display: flex;
+}
+
+.main_menu>li {
+    text-align: center;
+    position: relative;
+
+}
+
+.main_menu>li:hover {
+    background: var(--mainColor);
+}
+
+.main_menu>li:hover .depth1 {
+    background: var(--mainColor);
+}
+
+.main_menu>li>a {
+    display: block;
+    width: 115px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100px;
+}
+
+/* depth1 서브메뉴 숨기기 */
+.depth1 {
+    display: none;
+    position: absolute;
+    line-height: 2;
+    padding: 30px 0 0;
+    /* background: rgba(0, 255, 0, 0.1); */
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.main_menu:hover .depth1 {
+    display: block;
+}
+
+.sns_list {
+    display: flex;
+    gap: 10px;
+}
+
+/* .sns_list>li {} */
+
+.sns_list>li>a {
+    display: flex;
+    /* 이미지를 상하 or 좌우 가운데로 보내고 싶을 때
+       & display:block 대신 사용 가능.
+       "display:flex" */
+    justify-content: center;
+    /* 좌우 */
+    align-items: center;
+    /* 위아래 */
+    width: 39px;
+    height: 39px;
+    border: 2px solid var(--mainTextColor);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.sns_list>li>a:hover {
+    background: var(--mainColor);
+    border-color: transparent;
+}
+
+main {
+    height: 500px;
+}
+
+/* footer {} */
+
+.footer_top {
+    background: var(--mainColor);
+    padding: 20px 0;
+}
+
+.util_menu {
+    display: flex;
+    gap: 20px;
+}
+
+.util_menu>li>a {
+    font-weight: 600;
+}
+
+.util_menu>li>a:hover {
+    text-decoration: underline;
+}
+
+.footer_bottom {
+    background: var(--mainTextColor);
+    padding: 60px 0;
+    color: #aaa;
+}
+
+.footer_bottom>.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_bottom>.inner>.footer_bottom_left>div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer_bottom_left>div>img {
+    width: 200px;
+}
+
+.footer_bottom_left>address {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.footer_bottom_left>address strong {
+    /* font-size:16px; */
+    color: #fff;
+}
+
+.sitemap{
+    display:flex;
+    gap: 30px;
+}
+
+.sitemap>li>a{
+    font-size:18px;
+    color:#fff;
+}
+
+.sitemap .depth1{
+    display:block;
+    position:static;
+    /* position:static 원래 상태로 */
+}
